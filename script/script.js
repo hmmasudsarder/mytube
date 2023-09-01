@@ -59,6 +59,7 @@ const handleShowId = async (id) => {
             </h2>
             <div id="true-container" class="mt-2 text-start ml-3 text-slate-400 flex gap-2">
             <p>${data.authors[0].profile_name}</p>
+            <p>${data.authors[0].verified ? '<i class="fa-solid fa-circle-check text-black"></i>' : ''}</p>
             
             <p></p>
             </div>
