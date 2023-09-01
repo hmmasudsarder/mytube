@@ -14,23 +14,32 @@ const display = (datas) => {
   }
 };
 const handleShowId = async (id) => {
-  console.log(id)
+  const Id = id;
+  
   const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`);
   const data = await res.json();
   //    console.log(data.data)
   const divContainer = document.getElementById('div-container');
+  const trueContainer = document.getElementById('true-container');
   divContainer.innerHTML = '';
+  if(Id === '1005'){
+    divContainer.innerHTML = `<div class="container mx-auto ">
+          <img class=" mx-auto" src="./../img/Icon.png" alt="" />
+          <p class="text-4xl">Opp's Your Content Not Available</p>
+      </div>`;
+  }
   data.data.forEach(data => {
-    console.log(data.authors[0].verified)
+    const isTrue = data.authors[0].verified;
+    
     const divFull = document.createElement('div');
     divFull.innerHTML = `
     <div class="">
-              <figure id="img" class=w-100>
-                <img class="rounded-lg"
-                  src=${data.thumbnail}
-                  alt="Shoes"
+      <figure id="img" class=w-100>
+         <img class="rounded-lg"
+          src=${data.thumbnail}
+          alt="Shoes"
                 />
-              </figure>
+      </figure>
     </div>
     <div class="">
       <div class="">
@@ -48,8 +57,10 @@ const handleShowId = async (id) => {
             <h2 class="text-xl font-bold ml-3">
                 ${data.title}
             </h2>
-            <div class="mt-2 text-start ml-3 text-slate-400 flex gap-2">
+            <div id="true-container" class="mt-2 text-start ml-3 text-slate-400 flex gap-2">
             <p>${data.authors[0].profile_name}</p>
+            
+            <p></p>
             </div>
             <div class="mt-2 text-start ml-3 text-slate-400">
             <p class="text-xl">${data.others.views} views</p>
@@ -60,7 +71,7 @@ const handleShowId = async (id) => {
     </div>
   </div>`;
     divContainer.appendChild(divFull);
-  })
+  });
 
 
 }
