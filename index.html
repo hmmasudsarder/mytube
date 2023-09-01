@@ -10,20 +10,21 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <header class="container mx-auto">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <!-- <label tabindex="0" class="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-              >
+              > -->
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -32,27 +33,16 @@
                 />
               </svg>
             </label>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
-            </ul>
+            
           </div>
-          <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a class="">
+            <img src="./img/Logo.png" alt="">
+          </a>
         </div>
         <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
+          <div class="menu menu-horizontal px-1">
             <a class="btn">Button</a>
-          </ul>
+          </div>
         </div>
         <div class="navbar-end">
           <a class="btn">Button</a>
@@ -62,11 +52,12 @@
     <main class="container mx-auto text-center">
         <div class="sm:btn-sm md:btn-md lg:btn-lg" id="all-btn">
         </div>
-       <div id="div-container" class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-3 ">
+       <div id="div-container" class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-3 mt-4">
             
        </div>
     </main>
     <footer></footer>
+    <script src="https://kit.fontawesome.com/84a2d6f991.js" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>
   </body>
 </html>
